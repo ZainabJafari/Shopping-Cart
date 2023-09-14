@@ -15,8 +15,8 @@ export function Store() {
       <div >
         {getData.map(product => (
 
-          <div key={product.id}>
-            <Link to={`/details/${product.id}`}>
+          <div key={product._id}>
+            <Link to={`/details/${product._id}`}>
             <div className='product-list'>
               <div className='product-style'><h5 className='name-style'>Name:</h5>{product.productName}</div>
               <div className='product-style'><h5>Description:</h5>{product.description}</div>

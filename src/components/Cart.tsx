@@ -11,7 +11,7 @@ const Cart = () => {
     <div>
         <div>
             {getData.map((p) => {
-                if(cartItems.some((i) => i.id === p.id && i.quantity > 0))
+                if(cartItems.some((i) => i._id === p._id && i.quantity > 0))
                 return (
                     <div>
                         <p>{p.description}</p>

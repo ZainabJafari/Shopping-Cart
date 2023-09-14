@@ -10,9 +10,8 @@ function ProductCreation( {setData}: ProductCreationProps) {
 
     const [product, setProduct] = useState<Products[]>([])
 
-    const [formData , setFormData] = useState<Products>
+    const [formData , setFormData] = useState<FormProduct>
     ({
-        id: 123,
         productName: '',
         description: '',
         price: 123, 
@@ -34,7 +33,6 @@ function ProductCreation( {setData}: ProductCreationProps) {
             console.log(newProduct);
 
             setFormData({
-              id: 123,
                 productName: '',
                 description: '',
                 price: 123, 

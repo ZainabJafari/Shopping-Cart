@@ -23,13 +23,13 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
             <Offcanvas.Body>
                 <Stack gap={3}>
           {cartItems.map(item => (
-            <CartItem key={item.id} {...item} />
+            <CartItem key={item._id} {...item} />
           ))}
           <div className="ms-auto fw-bold fs-5">
             Total{" "}
             {formatCurrency(
                 cartItems.reduce((total, cartItem) => {
-                    const item = getData.find(i => i.id === cartItem.id)
+                    const item = getData.find(i => i._id === cartItem._id)
                     return total + (item?.price || 0 ) * cartItem.quantity
 
                 }, 0)

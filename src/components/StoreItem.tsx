@@ -3,22 +3,14 @@ import {Button , Card} from 'react-bootstrap'
 import {formatCurrency} from '../utilities/formatCurrency'
 import { Link } from "react-router-dom"
 
-type StoreItemsProps = {
-    id: number
-    name: string
-    description: string
-    price: number
-    imageURL: string
-}
-
-export function StoreItem({id , productName , price , imageURL}: Products){
+export function StoreItem({_id , productName , price , imageURL}: Products){
 
     const {
         getItemQuantity, increaseCartQuantity , decreaseCartQuantity , removeFromCart
  
     } = useCart()
 
-    const quantity = getItemQuantity(id)
+    const quantity = getItemQuantity(_id)
 
     return(
         <Card className="h-100">
@@ -35,7 +27,7 @@ export function StoreItem({id , productName , price , imageURL}: Products){
           </Card.Title>
           <div className="mt-auto">
             {quantity === 0 ? (
-              <Link to='/cart'><Button className="w-100" onClick={() => increaseCartQuantity(id)}>
+              <Link to='/cart'><Button className="w-100" onClick={() => increaseCartQuantity(_id)}>
               + Add To Cart
             </Button></Link>
             ) : (
@@ -47,14 +39,14 @@ export function StoreItem({id , productName , price , imageURL}: Products){
                   className="d-flex align-items-center justify-content-center"
                   style={{ gap: ".5rem" }}
                 >
-                  <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
+                  <Button onClick={() => decreaseCartQuantity(_id)}>-</Button>
                   <div>
                     <span className="fs-3">{quantity}</span> in cart
                   </div>
-                  <Button onClick={() => increaseCartQuantity(id)}>+</Button>
+                  <Button onClick={() => increaseCartQuantity(_id)}>+</Button>
                 </div>
                 <Button
-                  onClick={() => removeFromCart(id)}
+                  onClick={() => removeFromCart(_id)}
                   variant="danger"
                   size="sm"
                 >

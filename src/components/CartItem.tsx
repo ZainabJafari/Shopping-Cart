@@ -4,15 +4,15 @@ import {Button , Stack} from 'react-bootstrap'
 import {formatCurrency} from '../utilities/formatCurrency'
 
 type CartItemProps = {
-  id: number
+  _id: string
   quantity: number
 }
 
-export function CartItem({ id, quantity }: CartItemProps) {
+export function CartItem({ _id, quantity }: CartItemProps) {
   const { removeFromCart } = useCart()
 
   const {getData} = useProductContext()
-  const item = getData.find(i => i.id === id)
+  const item = getData.find(i => i._id === _id)
   if (item == null) return null
 
   return (
@@ -39,7 +39,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
       <Button
         variant="outline-danger"
         size="sm"
-        onClick={() => removeFromCart(item.id)}
+        onClick={() => removeFromCart(item._id)}
       >
         &times;
       </Button>
