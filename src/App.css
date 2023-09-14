@@ -1,38 +1,234 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto-Regular, Roboto;
+}
+.create-form {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid white;
+    font-size: 14px;
+    box-shadow: 20px 20px 20px 20px rgb(250, 245, 245);
+    margin-top: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-group {
+    padding: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-text {
+    float: left;
+    padding: 20px 440px 20px 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(250, 250, 250);
+    border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-primary {
+    padding: 15px;
+    margin: 5px;
+    background-color: rgb(199, 22, 51);
+    border: none;
+    color: aliceblue;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checkbox {
+    margin: 30px;
+}
+
+.text {
+    font-size: 12px;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-list{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    padding: 20px;
+    text-decoration: none;
+    margin: 10px;
+    margin-left: 130px;
+}
+.description-text{
+    padding: 20px;
+    font-size: 10px;
+}
+.link{
+    text-decoration: none;
+}
+.product-list p{
+    font-size: 14px;
+    padding-top: 50px;
+    color: black;
+}
+.products-details {
+    border: 1px solid black;
+    background-color: aliceblue;
+    width: 80%;
+    margin-left: 100px;
+}
+
+.products-description {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.edit {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.btn-danger {
+    padding: 20px;
+    background-color: rgb(250, 49, 80);
+    border: none;
+    margin-left: 100px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    padding: 20px;
+    width: 50%;
+    background-color: rgb(211, 211, 211);
+    border: none;
+}
+
+.create-product-text {
+    text-align: center;
+
+}
+.active{
+    text-decoration: none;
+    font-size: 30px;
+}
+.navigation a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.navigation li{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 14px;
+}
+.navigation{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.cart{
+    width: 200px;    
+}
+.cart-img{
+    width: 200px;
+    margin-left: 500px;
+
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 200px;
+    font-size: 14px;
+
+}
+.input-style{
+    padding: 12px;
+}
+
+.inputs{
+    padding: 12px;
+    width: 800px;
+    background-color: rgb(244, 243, 243);
+    font-size: 14px;
+    border: none;
+
+
+
+}
+.btn-success{
+    padding: 15px;
+    width: 150px;
+    background-color: rgb(13, 115, 13);
+    color: aliceblue;
+    cursor: pointer;
+}
+.btn-back{
+    padding: 15px;
+    width: 150px;
+    background-color: rgb(77, 91, 77);
+    color: aliceblue;
+    cursor: pointer;
+
+}
+.btn{
+    display: flex;
+
+}
+.text{
+    padding-left: 500px;
+    margin: 50px;
+    font-size: 25px;
+}
+.btn-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.btn-style{
+    padding: 10px;
+    width: 100px;
+    background-color: rgb(61, 122, 209);
+    border: none;
+    color: aliceblue;
+
+}
+.btn-style-danger{
+    padding: 10px;
+    width: 100px;
+    background-color: rgb(255, 41, 41);
+    border: none;
+    color: aliceblue;
+}
+.error{
+    color: red;
+}
+
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    font-size: 20px;
+    text-decoration: none;
+}
+li.nav-li{
+    text-decoration: none;
+
 }
