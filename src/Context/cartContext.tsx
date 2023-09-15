@@ -1,7 +1,6 @@
 import { type } from 'os'
 import {ReactNode, createContext, useContext, useState } from 'react'
 import {useLocalStorage} from '../hooks/useLocalStorage'
-import { ShoppingCart } from '../components/ShoppingCart'
 type CartProviderProps = {
     children: ReactNode
 }
@@ -97,7 +96,6 @@ export const CartProvider = ({children}: CartProviderProps) => {
     return (
         <CartContextType.Provider value={{getItemQuantity , increaseCartQuantity , decreaseCartQuantity , removeFromCart , openCart , closeCart , cartItems , cartQuantity}}>
         {children}
-        <ShoppingCart isOpen={isOpen}/>
         </CartContextType.Provider>
     )
 }

@@ -9,7 +9,6 @@ interface ProductCreationProps{
 function ProductCreation( {setData}: ProductCreationProps) {
 
     const [product, setProduct] = useState<Products[]>([])
-
     const [formData , setFormData] = useState<FormProduct>
     ({
         productName: '',
