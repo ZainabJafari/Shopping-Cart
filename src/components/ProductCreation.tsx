@@ -1,12 +1,10 @@
 import axios from 'axios';
 import React, { useState , useEffect} from 'react'
+import {useNavigate} from 'react-router-dom'
 
 
-interface ProductCreationProps{
-    setData: React.Dispatch<React.SetStateAction<Products[]>>;
-}
-
-function ProductCreation( {setData}: ProductCreationProps) {
+function ProductCreation() {
+  const navigate = useNavigate()
 
     const [product, setProduct] = useState<Products[]>([])
     const [formData , setFormData] = useState<FormProduct>
@@ -38,7 +36,9 @@ function ProductCreation( {setData}: ProductCreationProps) {
                 imageURL: ''
             })
 
-            setData((prevProducts) => [...prevProducts, newProduct])
+            setProduct((prevProducts) => [...prevProducts, newProduct])
+            navigate('/')
+
         })
         .catch((error) => {
             console.log(error);
@@ -81,7 +81,8 @@ function ProductCreation( {setData}: ProductCreationProps) {
                   <label htmlFor="description" className="form-label">imageURL:</label>
                   <textarea className="form-control" id="imageURL" name="imageURL" value={formData.imageURL} onChange={Inputs}></textarea>
                 </div>
-                <button className='btn btn-primary' onClick={createProduct}>ADD</button>
+                <button className='btn-add' onClick={createProduct}>Add</button>
+
               </form>
               </div>
     </div>

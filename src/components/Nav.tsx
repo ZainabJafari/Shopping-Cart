@@ -16,9 +16,11 @@ const Navbar = () => {
           <ul className='navbar-nav'>
             <li className='home'><Link  className='nav-link' to='/'>Home</Link>
             </li>
+            <li className='add'><Link  className='nav-link' to='/add'>Add</Link>
+            </li>
             <h2 className='heder'>Clock.com</h2>
-            <li className='cart'><Link className='nav-link' to={'/cart'}><FontAwesomeIcon icon={faShoppingCart} />{cartQuantity > 0 && <span className='cart-items-count'>{cartQuantity}</span>}</Link>
           
+            <li className='cart'><Link className='nav-link' to={'/cart'}><FontAwesomeIcon icon={faShoppingCart} />{cartQuantity > 0 && <span className='cart-items-count'>{cartQuantity}</span>}</Link>
             </li>
           </ul>
         </div>

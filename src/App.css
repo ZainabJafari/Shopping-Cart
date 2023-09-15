@@ -50,7 +50,7 @@
     padding-left: 9px;
     padding-right: 9px;
     border-radius: 9px;
-    font-size: 16px;
+    font-size: 18px;
     background-color: red;
     color: azure;
     padding: 0 5px;
@@ -90,7 +90,7 @@
 }
 
 .cart{
-    padding-left: 450px;
+    padding-left: 400px;
     font-size: 25px;
 }
 .home{
@@ -120,3 +120,27 @@
     padding: 10px;
     background-color: rgb(201, 61, 37);
     }
+
+.btn-add{
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    /* margin-left: 60px; */
+    color: aliceblue;
+    border: none;
+    padding: 10px;
+    background-color: rgb(6, 102, 3);
+
+}
+.add{
+    width: 50px;
+    height: 40px;
+    margin-top: 4px;
+    /* margin-left: 60px; */
+    color: aliceblue;
+    border: none;
+    /* padding: 10px; */
+    background-color: rgb(59, 62, 59);
+    border-radius: 30px;
+    
+}
