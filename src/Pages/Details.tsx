@@ -38,13 +38,14 @@ const Details = () => {
   return (
     <div>
       <div className='product-list-detail'>
+        
         <img
           src={product.imageURL}
           alt={product.productName}
           style={{ display: "block", maxWidth: "50%" }} />
           <div className='display'>
         <h5 className='product-style'>{product.productName}</h5>
-        <h5 className='product-style'>{product.description}</h5><br /><p><ul><li>Fri frakt</li><li>Snabba leveranser</li></ul></p>
+        <h5 className='product-style'>{product.description}</h5><br /><ul><li>Fri frakt</li><li>Snabba leveranser</li></ul>
         <h5 className='product-style'>{product.price} $</h5>
         </div>
         <button className='detail-btn' onClick={() => increaseCartQuantity(product._id)}>Add to cart</button>

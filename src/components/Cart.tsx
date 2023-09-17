@@ -21,6 +21,7 @@ const Cart = () => {
                         return (
                             <div className='container-cart'>
                                 <div className='product-list'>
+                                    <p key={p._id}></p>
                                     <div className='product-style'><h5 className='name-style'>Name:</h5>{p.productName}</div>
                                     <div className='product-style'><h5>Description:</h5>{p.description}</div>
                                     <div className='product-style'><h5>Price:</h5> {p.price} $</div>

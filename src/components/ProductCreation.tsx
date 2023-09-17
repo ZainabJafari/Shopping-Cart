@@ -1,10 +1,8 @@
 import axios from 'axios';
 import React, { useState , useEffect} from 'react'
-import {useNavigate} from 'react-router-dom'
 
 
 function ProductCreation() {
-  const navigate = useNavigate()
 
     const [product, setProduct] = useState<Products[]>([])
     const [formData , setFormData] = useState<FormProduct>
@@ -37,7 +35,6 @@ function ProductCreation() {
             })
 
             setProduct((prevProducts) => [...prevProducts, newProduct])
-            navigate('/')
 
         })
         .catch((error) => {

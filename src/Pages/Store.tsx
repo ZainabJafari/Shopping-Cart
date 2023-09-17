@@ -15,8 +15,9 @@ export function Store() {
       <div >
         {getData.map(product => (
          <Link to={`/details/${product._id}`} className="nav-link">
-          <div key={product._id}>
+
            <div className='product-list'>
+            <div key={product._id}></div>
           <div className='product-style'><h5 className='name-style'>Name:</h5>{product.productName}</div>
            <div className='product-style'><h5>Description:</h5>{product.description}</div>
            <div className='product-style'><h5>Price:</h5> {product.price} $</div>
@@ -25,7 +26,6 @@ export function Store() {
                   alt={product.productName}
                   style={{ display: "block", maxWidth: "20%" }} />
               </div>
-          </div>
           </Link>
         ))}
       </div>
