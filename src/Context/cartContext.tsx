@@ -10,6 +10,7 @@ type CartItem = {
     quantity: number
 }
 
+// Define the shape of the CartContext
 type CartContextType = {
     openCart: () => void
     closeCart: () => void
@@ -29,15 +30,18 @@ export function useCart () {
     return useContext(CartContextType)
 }
 
+// CartProvider component to manage the cart state and provide context
 export const CartProvider = ({children}: CartProviderProps) => {
 
     const [isOpen , setIsOpen] = useState(false)
 
+    // State to manage cart items, stored in local storage
     const [cartItems , setCartItems] = useLocalStorage<CartItem[]>(
         "shopping-cart",
         []
     )
 
+    // Calculate the total quantity of items in the cart
     const cartQuantity = cartItems.reduce(
         (quantity, item) => item.quantity + quantity,
         0
@@ -47,11 +51,12 @@ export const CartProvider = ({children}: CartProviderProps) => {
     const closeCart = () => setIsOpen(false)
 
 
-
+    // Function to get the quantity of a specific item in the cart
     const getItemQuantity = (id: string) => {
         return cartItems.find(item => item._id === id)?.quantity || 0
     }
 
+    // Function to increase the quantity of a specific item in the cart
     function increaseCartQuantity(id: string){
         setCartItems(prevItem => {
             if(prevItem.find(item => item._id === id) == null){
@@ -69,6 +74,7 @@ export const CartProvider = ({children}: CartProviderProps) => {
         })
     }
 
+    // Function to decrease the quantity of a specific item in the cart
     function decreaseCartQuantity(id: string){
         setCartItems(prevItem => {
             if(prevItem.find(item => item._id === id)?.quantity === 1){

@@ -1,0 +1,14 @@
+.card-title {
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  .btn-store{
+    border: none;
+    padding: 10px;
+  }

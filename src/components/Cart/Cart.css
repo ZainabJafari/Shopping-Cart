@@ -1,0 +1,36 @@
+.rubric {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .cart-item {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .product-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .product-description {
+    color: #555;
+  }
+  
+  .product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  .btn-outline-primary, .btn-outline-secondary {
+    font-size: 1.2rem;
+  }
+  
+  .card-footer .btn-danger {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
