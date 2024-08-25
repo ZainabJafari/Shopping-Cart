@@ -1,3 +1,4 @@
+<img width="464" alt="image" src="https://github.com/user-attachments/assets/d45436ed-4260-4478-9129-0a905941877b">
 
 # Getting Started with Create React App
 
